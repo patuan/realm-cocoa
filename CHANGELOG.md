@@ -31,6 +31,10 @@ x.x.x Release notes (yyyy-MM-dd)
 ### Enhancements
 
 * Realm collections can now be sorted by properties over to-one relationships.
+* Add the ability to change read, write and management permissions for
+  synchronized Realms using the management Realm obtained via the
+  `-[RLMSyncUser managementRealmWithError:]` API and the
+  `RLMSyncPermissionChange` class.
 
 ### Bugfixes
 
@@ -155,10 +159,6 @@ This release adds binary versions of Swift 3.0.2 frameworks built with Xcode 8.2
 ### Enhancements
 
 * Add `+[RLMSyncUser currentUser]`.
-* Add the ability to change read, write and management permissions for
-  synchronized Realms using the management Realm obtained via the
-  `-[RLMSyncUser managementRealmWithError:]` API and the
-  `RLMSyncPermissionChange` class.
 
 ### Bugfixes
 
@@ -176,7 +176,9 @@ GM seed.
 
 ### Enhancements
 
-* None.
+* Add `SyncPermissionOffer` and `SyncPermissionOfferResponse` classes to allow
+  creating and accepting permission change events to synchronized Realms between
+  different users.
 
 ### Bugfixes
 
